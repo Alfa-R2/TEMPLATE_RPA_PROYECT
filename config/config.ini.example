@@ -7,3 +7,6 @@ SHAREPOINT_LOCAL_DIR=`your_path_where_is_your_sharepoint_local_dir`
 
 [DEBUG]
 email=`your_debug_email@example.com`
+
+[OCR]
+TESSERACT_PATH=`your_path_to_tesseract`

@@ -1,6 +1,9 @@
 # project
 .venv
 app.log.jsonl
+app.log.jsonl.1
+app.log.jsonl.2
+app.log.jsonl.3
 logs.log
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -36,7 +36,7 @@
             "level": "DEBUG",
             "formatter": "json",
             "filename": "app.log.jsonl",
-            "maxBytes": 250000,
+            "maxBytes": 1000000,
             "backupCount": 3
         },
         "file": {
@@ -44,7 +44,7 @@
             "level": "DEBUG",
             "formatter": "detailed",
             "filename": "logs.log",
-            "maxBytes": 250000,
+            "maxBytes": 1000000,
             "backupCount": 3
         }
     },

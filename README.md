@@ -16,6 +16,11 @@
 - ***bot.bat*** -> Necessary file to start the src module (it can be modify)
 - ***venv.bat*** -> Necessary file to create a virtual environment
 
+### secrets
+
+- ***bot_gsheets.json*** -> Necessary file to store the credentials of google sheet account (the content is provided for google cloud Console)
+- ***client_gmail.json*** -> Necessary file to store the credentials of google email account (the content is provided for google cloud Console)
+
 ### src
 
 - ***logger*** -> DIR with the module's logger
