@@ -4,17 +4,11 @@
 
 ### .vscode
 
-- ***launch.json*** -> Necessary file to debug the src module
+- ***launch.json*** -> Necessary file to debug the test module
 
 ### config
 
-- ***config_log.json*** -> Necessary file to init the module's logger
 - ***config.ini.example*** -> Optional file to init env variables
-
-### Scripts
-
-- ***bot.bat*** -> Necessary file to start the src module (it can be modify)
-- ***venv.bat*** -> Necessary file to create a virtual environment
 
 ### secrets
 
@@ -23,5 +17,8 @@
 
 ### src
 
-- ***logger*** -> DIR with the module's logger
-- ***paths.py*** -> Class to manage the module's paths
+- ***your_project_name*** -> It is a DIR that reprents your module
+
+## FILE descriptions
+
+- ***pyproject.toml*** -> It is a neccesary file to set up you library module
