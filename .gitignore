@@ -1,4 +1,7 @@
 # project
+config.ini
+bot_gsheets.json
+client_gmail.json
 .venv
 app.log.jsonl
 app.log.jsonl.1
