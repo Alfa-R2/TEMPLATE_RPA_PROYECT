@@ -1,20 +1,19 @@
 """
-    Example:
-        FileLogger.debug("debug message")
-        FileLogger.info("info message")
-        FileLogger.warning("warning message")
-        FileLogger.error("error message")
-        FileLogger.critical("critical message")
+Example:
+    FileLogger.debug("debug message")
+    FileLogger.info("info message")
+    FileLogger.warning("warning message")
+    FileLogger.error("error message")
+    FileLogger.critical("critical message")
 
-        try:
-            1 / 0
-        except ZeroDivisionError:
-            FileLogger.exception("exception message")
+    try:
+        1 / 0
+    except ZeroDivisionError:
+        FileLogger.exception("exception message")
 """
 
-import logging.config
-import logging.handlers
 from logging import Logger as L
+from logging import getLogger
 
 from .core.logger import Logger
 
@@ -29,5 +28,5 @@ class FileLogger(Logger):
     :method   exception("exception message")
     """
 
-    _logger: L = logging.getLogger("file_logger")
+    _logger: L = getLogger("file_logger")
     executed: bool = False
