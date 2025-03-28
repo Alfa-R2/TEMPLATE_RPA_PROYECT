@@ -8,6 +8,10 @@ app.log.jsonl.1
 app.log.jsonl.2
 app.log.jsonl.3
 logs.log
+logs.log.1
+logs.log.2
+logs.log.3
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
