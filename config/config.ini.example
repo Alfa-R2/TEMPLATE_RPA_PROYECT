@@ -5,13 +5,18 @@ LEGASYS_USERNAME = `your_legasys_username`
 LEGASYS_PASSWORD = `your_legasys_password`
 SUNARP_USERNAME = `your_sunarp_username`
 SUNARP_PASSWORD = `your_sunarp_password`
+SIGNO_USERNAME = `your_signo_username`
+SIGNO_PASSWORD = `your_signo_password`
+
 
 [PATHS]
 SHAREPOINT_LOCAL_DIR=`your_path_where_is_your_sharepoint_local_dir`
 TESSERACT_PATH=`your_path_to_tesseract`
+WKHTMLTOPDF_PATH=`your_path_to_wkhtmltopdf`
 
 [DEBUG]
 EMAIL=`your_debug_email@example.com`
 
 [RESOURCES]
 SPREADSHEET_ID = `your_spreadsheet_id`
+TWO_CAPTCHA_API_KEY = `your_two_captcha_api_key`
