@@ -9,6 +9,19 @@
         "detailed":{
             "format": "[%(levelname)s|%(module)s|L%(lineno)d] %(asctime)s: %(message)s" ,
             "datefmt": "%Y-%m-%dT%H:%M:%S%z"
+        },
+        "json":{
+            "()": "src.logger.formats.jsonlogger.JsonFormatter",
+            "fmt_keys":{
+                "level":"levelname",
+                "message":"message",
+                "timestamp":"timestamp",
+                "logger":"name",
+                "module":"module",
+                "function":"funcName",
+                "line":"lineno",
+                "thread_name":"threadName"
+            }
         }
     },
     "handlers": {
@@ -18,12 +31,20 @@
             "formatter": "detailed",
             "stream": "ext://sys.stderr"
         },
+        "json_file": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "level": "DEBUG",
+            "formatter": "json",
+            "filename": "app.log.jsonl",
+            "maxBytes": 250000,
+            "backupCount": 3
+        },
         "file": {
             "class": "logging.handlers.RotatingFileHandler",
             "level": "DEBUG",
             "formatter": "detailed",
             "filename": "logs.log",
-            "maxBytes": 1000000,
+            "maxBytes": 250000,
             "backupCount": 3
         }
     },
@@ -32,7 +53,11 @@
             "level": "ERROR"  ,
             "handlers": ["stderr"]
         },
-        
+        "json_logger":{
+            "level": "DEBUG",
+            "handlers": ["stderr", "json_file"],
+            "propagate": false
+        },
         "file_logger":{
             "level": "DEBUG",
             "handlers": ["stderr","file"],

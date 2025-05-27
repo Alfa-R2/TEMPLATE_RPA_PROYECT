@@ -10,8 +10,10 @@ class Paths:
     """
 
     ROOT: Path
+    DOT_DATA: Path
     CONFIG_DIR: Path
-    SRC_DIR: Path
+    PROJECT_DIR: Path
+    LOGS_DIR: Path
 
     @classmethod
     def from_config(cls, bot_path: str, cp: ConfigParser | None = None) -> "Paths":
@@ -25,11 +27,20 @@ class Paths:
         Returns:
             Paths: A instance of Paths.
         """
-        root = Path(bot_path).parents[1]
+        parents = Path(bot_path).parents
+        root = parents[2]
         config_dir = root / "config"
-        src_dir = root / "src"
+        project_dir = parents[0]
+        dot_data = root / ".data"
+        logs_dir = dot_data / "logs"
+
+        for path in [logs_dir]:
+            path.mkdir(parents=True, exist_ok=True)
+
         return cls(
             ROOT=root,
+            PROJECT_DIR=project_dir,
             CONFIG_DIR=config_dir,
-            SRC_DIR=src_dir,
+            DOT_DATA=dot_data,
+            LOGS_DIR=logs_dir,
         )

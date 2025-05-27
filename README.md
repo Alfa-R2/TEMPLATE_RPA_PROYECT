@@ -1,6 +1,15 @@
-# TEMPLATE_RPA_PROYECT
+# {{ cookiecutter.project_slug }}
 
-## DIR descriptions
+{{ cookiecutter.description }}
+
+## Uso
+
+```bash
+pdm install
+pdm run start
+```
+
+## Descriptions
 
 ### .vscode
 
@@ -8,13 +17,11 @@
 
 ### config
 
-- ***config_log.json*** -> Necessary file to init the module's logger
-- ***config.ini.example*** -> Optional file to init env variables
+- ***config.ini.example*** -> Optional file to init variables
 
 ### Scripts
 
 - ***bot.bat*** -> Necessary file to start the src module (it can be modify)
-- ***venv.bat*** -> Necessary file to create a virtual environment
 
 ### secrets
 
@@ -23,5 +30,14 @@
 
 ### src
 
-- ***logger*** -> DIR with the module's logger
 - ***paths.py*** -> Class to manage the module's paths
+
+### tests
+
+- It works with pytest
+
+### Other
+
+- ***.gitignore*** -> File to ignore unnecessary files
+- ***pyproject.toml*** -> File to manage the dependencies
+- ***example.env*** -> File to manage the environment variables
