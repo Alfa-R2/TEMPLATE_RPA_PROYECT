@@ -15,6 +15,7 @@ pdm self add cookiecutter
 
 ```bash
 pdm init --cookiecutter https://github.com/Alfa-R2/TEMPLATE_RPA_PROYECT.git
+cd your_project_name
 pdm install
 git init . 
 ```
