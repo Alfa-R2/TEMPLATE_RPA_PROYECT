@@ -7,7 +7,7 @@ if not "%1" == "h" (
     exit /b
 )
 
-title YOUR_TITTLE_HERE
+title {{cookiecutter.package_name}}
 cd ..
 echo Changed to: %cd%
 

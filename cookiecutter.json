@@ -1,5 +1,7 @@
 {
   "project_slug": "mi_proyecto_rpa",
+  "package_name": "hello_world",
   "author": "Leonardo",
-  "description": "Un proyecto RPA con PDM"
+  "description": "Un proyecto RPA con PDM",
+  "python_version": "3.12"
 }
