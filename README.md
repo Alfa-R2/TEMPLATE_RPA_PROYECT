@@ -1,43 +1,56 @@
-# {{ cookiecutter.project_slug }}
+# TEMPLATE_RPA_PROJECT
 
-{{ cookiecutter.description }}
+This is a repository template with the structure of src layout for RPA projects.
+It work with ***pytest**
 
-## Uso
+## Requirement
+
+It is important you add cookiecutter to global pdm.
 
 ```bash
-pdm install
-pdm run start
+pdm self add cookiecutter
 ```
 
-## Descriptions
+## Use
 
-### .vscode
+```bash
+pdm init --cookiecutter https://github.com/Alfa-R2/TEMPLATE_RPA_PROYECT.git
+pdm install
+git init . 
+```
 
-- ***launch.json*** -> Necessary file to debug the src module
+## Structure
 
-### config
-
-- ***config.ini.example*** -> Optional file to init variables
-
-### Scripts
-
-- ***bot.bat*** -> Necessary file to start the src module (it can be modify)
-
-### secrets
-
-- ***bot_gsheets.json*** -> Necessary file to store the credentials of google sheet account (the content is provided for google cloud Console)
-- ***client_gmail.json*** -> Necessary file to store the credentials of google email account (the content is provided for google cloud Console)
-
-### src
-
-- ***paths.py*** -> Class to manage the module's paths
-
-### tests
-
-- It works with pytest
-
-### Other
-
-- ***.gitignore*** -> File to ignore unnecessary files
-- ***pyproject.toml*** -> File to manage the dependencies
-- ***example.env*** -> File to manage the environment variables
+```text
+    ├── .vscode
+    │   ├── launch.json                    <- Necessary file to set the debug of the package.
+    │   └── settings.json                  <- Necessary file to enable auto-import, set pytest and configure venv.
+    │
+    ├── config
+    │   └── config.ini.example             <- An example file with parameters that your project need to work correctly.
+    │
+    ├── scripts
+    │   └── run.bat                        <- A .bat file that able your project run in the terminal.
+    │
+    ├── secrets
+    │   ├── bot_gsheets.json.example       <- Necessary file to store the credentials of google sheet account.
+    │   └── client_gmail.json.example      <- Necessary file to store the credentials of google email account.
+    │
+    ├── src
+    │   └── {{cookiecutter.package_name}}  <- Your package.
+    |       ├── decorators                 <- A dir with useful decorators.
+    |       ├── __init__.py
+    |       ├── __main__.py             
+    |       ├── config.py                  <- A file where we load the environment variables.
+    |       ├── logger.py                  <- A file where we set the logger of loguru.
+    |       └── paths.py                   <- A file where we set a class to manage the module's paths.
+    |       
+    ├── tests                              <- A test dir that works with pytest.
+    │
+    ├── .gitignore                         <- File to ignore unnecessary files.
+    |
+    ├── example.env                        <- Example file to set the environment variables.
+    |
+    ├── pyproject.toml                     <- File to set the properties of the project.
+    |
+    └── README.md                          <- Information about the project.

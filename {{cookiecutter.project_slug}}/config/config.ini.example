@@ -3,8 +3,6 @@ SHAREPOINT_LOCAL_DIR=`your_path_where_is_your_sharepoint_local_dir`
 TESSERACT_PATH=`your_path_to_tesseract`
 WKHTMLTOPDF_PATH=`your_path_to_wkhtmltopdf`
 
-[DEBUG]
-EMAIL=`your_debug_email@example.com`
 
 [RESOURCES]
 SPREADSHEET_ID = `your_spreadsheet_id`
