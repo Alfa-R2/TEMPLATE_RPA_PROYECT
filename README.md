@@ -3,6 +3,8 @@
 This is a repository template with the structure of src layout for RPA projects.
 It work with ***pdm***, ***cookiecutter*** and ***pytest***.
 
+> :warning: **Aviso**: Don't clone this repository if you want use this.
+
 ## Requirement
 
 It is important you add cookiecutter to global pdm.
