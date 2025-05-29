@@ -1,7 +1,7 @@
 # TEMPLATE_RPA_PROJECT
 
 This is a repository template with the structure of src layout for RPA projects.
-It work with ***pdm***, ***cookiecutter*** and **pytest***.
+It work with ***pdm***, ***cookiecutter*** and ***pytest***.
 
 ## Requirement
 
