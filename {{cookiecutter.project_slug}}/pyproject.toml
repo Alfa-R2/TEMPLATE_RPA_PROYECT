@@ -26,8 +26,19 @@ build-backend = "setuptools.build_meta"
 [tool.mypy]
 ignore_missing_imports = true
 
+[tool.importlinter]
+root_package = "bot_pdt_plame"
+
+[[tool.mypy.overrides]]
+module = ["twocaptcha.*", "pytesseract.*", "thefuzz.*", "google_auth_oauthlib.flow.*", "pygsheets.*"]
+ignore_missing_imports = true
+
 [tool.pdm]
 distribution = true
+# By default, PDM assumes your package has the same name as the project and lives in the root or in a folder matching that name.
+# package-dir = "src" tells PDM: “look for all Python packages inside the src/ directory instead of the root”.
+# This is useful when you want a custom folder structure or a different package name, and it avoids accidental imports from the repo root during development or testing.
+package-dir = "src"
 
 [project.scripts]
 run-bot = "{{cookiecutter.package_name}}.__main__:main"

@@ -1,3 +1,20 @@
+"""
+Example:
+from loguru import logger
+
+    logger.debug("debug message")
+    logger.info("info message")
+    logger.warning("warning message")
+    logger.error("error message")
+    logger.critical("critical message")
+    logger.success("success message")
+
+    try:
+        1 / 0
+    except ZeroDivisionError:
+        logger.exception("exception message")
+"""
+
 from pathlib import Path
 from sys import stderr
 

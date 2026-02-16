@@ -1,13 +1,20 @@
 import functools
 import time
 from logging import error
-from typing import Callable
+from typing import Callable, ParamSpec, TypeVar
+
+P = ParamSpec("P")
+R = TypeVar("R")
 
 
-def retry(max_retries: int, delay: int, exceptions: tuple = (Exception,)) -> Callable:
-    def decorator_retry(func: Callable) -> Callable:
+def retry(
+    max_retries: int, delay: int, exceptions: tuple = (Exception,)
+) -> Callable[[Callable[P, R]], Callable[P, R]]:
+    def decorator_retry(func: Callable[P, R]) -> Callable[P, R]:
         @functools.wraps(func)
-        def wrapper_retry(*args, **kwargs) -> Callable:
+        def wrapper_retry(*args: P.args, **kwargs: P.kwargs) -> R:
+            last_exception = Exception("Max retries exceeded")
+
             for i in range(max_retries):
                 try:
                     return func(*args, **kwargs)
